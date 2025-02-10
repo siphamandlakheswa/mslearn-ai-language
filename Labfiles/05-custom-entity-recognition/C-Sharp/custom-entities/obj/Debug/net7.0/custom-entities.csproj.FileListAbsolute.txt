@@ -1,0 +1,6 @@
+E:\mslearn-ai-language\Labfiles\05-custom-entity-recognition\C-Sharp\custom-entities\obj\Debug\net7.0\custom-entities.csproj.AssemblyReference.cache
+E:\mslearn-ai-language\Labfiles\05-custom-entity-recognition\C-Sharp\custom-entities\obj\Debug\net7.0\custom-entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\mslearn-ai-language\Labfiles\05-custom-entity-recognition\C-Sharp\custom-entities\obj\Debug\net7.0\custom-entities.AssemblyInfoInputs.cache
+E:\mslearn-ai-language\Labfiles\05-custom-entity-recognition\C-Sharp\custom-entities\obj\Debug\net7.0\custom-entities.AssemblyInfo.cs
+E:\mslearn-ai-language\Labfiles\05-custom-entity-recognition\C-Sharp\custom-entities\obj\Debug\net7.0\custom-entities.csproj.CoreCompileInputs.cache
+E:\mslearn-ai-language\Labfiles\05-custom-entity-recognition\C-Sharp\custom-entities\obj\Debug\net7.0\custom-entities.sourcelink.json

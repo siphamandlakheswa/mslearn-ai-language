@@ -1,0 +1,6 @@
+E:\mslearn-ai-language\Labfiles\08-speech-translation\C-Sharp\translator\obj\Debug\net7.0\translator.csproj.AssemblyReference.cache
+E:\mslearn-ai-language\Labfiles\08-speech-translation\C-Sharp\translator\obj\Debug\net7.0\translator.GeneratedMSBuildEditorConfig.editorconfig
+E:\mslearn-ai-language\Labfiles\08-speech-translation\C-Sharp\translator\obj\Debug\net7.0\translator.AssemblyInfoInputs.cache
+E:\mslearn-ai-language\Labfiles\08-speech-translation\C-Sharp\translator\obj\Debug\net7.0\translator.AssemblyInfo.cs
+E:\mslearn-ai-language\Labfiles\08-speech-translation\C-Sharp\translator\obj\Debug\net7.0\translator.csproj.CoreCompileInputs.cache
+E:\mslearn-ai-language\Labfiles\08-speech-translation\C-Sharp\translator\obj\Debug\net7.0\translator.sourcelink.json
