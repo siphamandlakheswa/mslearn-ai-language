@@ -52,6 +52,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Azure.AI.Language.QuestionAnswering": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[3.1.3, )"

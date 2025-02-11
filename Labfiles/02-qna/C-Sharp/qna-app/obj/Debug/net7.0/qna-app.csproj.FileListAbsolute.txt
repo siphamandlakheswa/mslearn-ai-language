@@ -24,3 +24,7 @@ E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\obj\Debug\net7.0\refint\q
 E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\obj\Debug\net7.0\qna-app.pdb
 E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\obj\Debug\net7.0\qna-app.genruntimeconfig.cache
 E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\obj\Debug\net7.0\ref\qna-app.dll
+E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\bin\Debug\net7.0\Azure.AI.Language.QuestionAnswering.dll
+E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\bin\Debug\net7.0\Azure.Core.dll
+E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\mslearn-ai-language\Labfiles\02-qna\C-Sharp\qna-app\bin\Debug\net7.0\System.Memory.Data.dll
