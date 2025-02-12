@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 using Azure.Core;
 using Azure.Core.Serialization;
+using Azure.AI.Language.Conversations;
 
 // Import namespaces
 
@@ -29,7 +30,8 @@ namespace clock_client
                 string predictionKey = configuration["AIServicesKey"];
 
                 // Create a client for the Language service model
-                
+                var client = new ConversationAnalysisClient(new Uri(predictionEndpoint), new AzureKeyCredential(predictionKey));
+
                 // Get user input (until they enter "quit")
                 string userText = "";
                 while (userText.ToLower() != "quit")
@@ -40,9 +42,36 @@ namespace clock_client
                     {
 
                         // Call the Language service model to get intent and entities
-                        
+                        var response = await client.AnalyzeConversationAsync(
+                            new AnalyzeConversationOptions
+                            {
+                                Query = userText,
+                                Language = "en"
+                            });
+
+                        var prediction = response.Value.Prediction as ConversationPrediction;
+                        var topIntent = prediction.TopIntent;
+                        var entities = prediction.Entities;
+
                         // Apply the appropriate action
-                        
+                        switch (topIntent)
+                        {
+                            case "GetTime":
+                                var location = entities.FirstOrDefault(e => e.Category == "Location")?.Text;
+                                Console.WriteLine(GetTime(location));
+                                break;
+                            case "GetDate":
+                                var day = entities.FirstOrDefault(e => e.Category == "Day")?.Text;
+                                Console.WriteLine(GetDate(day));
+                                break;
+                            case "GetDay":
+                                var date = entities.FirstOrDefault(e => e.Category == "Date")?.Text;
+                                Console.WriteLine(GetDay(date));
+                                break;
+                            default:
+                                Console.WriteLine("Sorry, I didn't understand that.");
+                                break;
+                        }
                     }
 
                 }
