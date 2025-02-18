@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("classify-text")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b408dc1d8e5f7b111902bc6527a606d703c49a1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19ee292c82a48313318d522513638507dded778f")]
 [assembly: System.Reflection.AssemblyProductAttribute("classify-text")]
 [assembly: System.Reflection.AssemblyTitleAttribute("classify-text")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

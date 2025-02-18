@@ -24,3 +24,8 @@ E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\obj
 E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\obj\Debug\net7.0\classify-text.pdb
 E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\obj\Debug\net7.0\classify-text.genruntimeconfig.cache
 E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\obj\Debug\net7.0\ref\classify-text.dll
+E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\bin\Debug\net7.0\Azure.AI.TextAnalytics.dll
+E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\bin\Debug\net7.0\Azure.Core.dll
+E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\bin\Debug\net7.0\System.ClientModel.dll
+E:\mslearn-ai-language\Labfiles\04-text-classification\C-Sharp\classify-text\bin\Debug\net7.0\System.Memory.Data.dll
