@@ -6,7 +6,8 @@ using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
 // import namespaces
-
+    using Azure;
+    using Azure.AI.Translation.Text;
 
 
 namespace translate_text
@@ -30,10 +31,34 @@ namespace translate_text
 
                 // Create client using endpoint and key
 
+// Create client using endpoint and key
+AzureKeyCredential credentials = new AzureKeyCredential(aiSvcKey);
+Uri endpoint = new Uri(aiSvcEndpoint);
+TextAnalyticsClient aiClient = new TextAnalyticsClient(endpoint, credentials);
 
 
-                // Choose target language
+                // Choose target language rams.cs
 
+// Choose target language
+Response<GetLanguagesResult> languagesResponse = await client.GetLanguagesAsync(scope:"translation").ConfigureAwait(false);
+GetLanguagesResult languages = languagesResponse.Value;
+Console.WriteLine($"{languages.Translation.Count} languages available.\n(See https://learn.microsoft.com/azure/ai-services/translator/language-support#translation)");
+Console.WriteLine("Enter a target language code for translation (for example, 'en'):");
+string targetLanguage = "xx";
+bool languageSupported = false;
+while (!languageSupported)
+{
+    targetLanguage = Console.ReadLine();
+    if (languages.Translation.ContainsKey(targetLanguage))
+    {
+        languageSupported = true;
+    }
+    else
+    {
+        Console.WriteLine($"{targetLanguage} is not a supported language.");
+    }
+
+}
 
 
                 // Translate text

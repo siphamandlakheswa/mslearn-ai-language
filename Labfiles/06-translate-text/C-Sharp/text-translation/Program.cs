@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -52,7 +52,6 @@ namespace translate_text
                         Console.WriteLine("\nTranslation:\n" + translatedText);
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -66,7 +65,26 @@ namespace translate_text
             string language = "en";
 
             // Use the Azure AI Translator detect function
+            object[] body = new object[] { new { Text = text } };
+            var requestBody = JsonConvert.SerializeObject(body);
 
+            using (var client = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage())
+                {
+                    request.Method = HttpMethod.Post;
+                    request.RequestUri = new Uri($"{translatorEndpoint}/detect?api-version=3.0");
+                    request.Content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+                    request.Headers.Add("Ocp-Apim-Subscription-Key", cogSvcKey);
+                    request.Headers.Add("Ocp-Apim-Subscription-Region", cogSvcRegion);
+
+                    HttpResponseMessage response = await client.SendAsync(request).ConfigureAwait(false);
+                    string responseBody = await response.Content.ReadAsStringAsync();
+
+                    JArray jsonResponse = JArray.Parse(responseBody);
+                    language = (string)jsonResponse[0]["language"];
+                }
+            }
 
             // return the language
             return language;
@@ -77,12 +95,29 @@ namespace translate_text
             string translation = "";
 
             // Use the Azure AI Translator translate function
+            object[] body = new object[] { new { Text = text } };
+            var requestBody = JsonConvert.SerializeObject(body);
 
+            using (var client = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage())
+                {
+                    request.Method = HttpMethod.Post;
+                    request.RequestUri = new Uri($"{translatorEndpoint}/translate?api-version=3.0&from={sourceLanguage}&to=en");
+                    request.Content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+                    request.Headers.Add("Ocp-Apim-Subscription-Key", cogSvcKey);
+                    request.Headers.Add("Ocp-Apim-Subscription-Region", cogSvcRegion);
+
+                    HttpResponseMessage response = await client.SendAsync(request).ConfigureAwait(false);
+                    string responseBody = await response.Content.ReadAsStringAsync();
+
+                    JArray jsonResponse = JArray.Parse(responseBody);
+                    translation = (string)jsonResponse[0]["translations"][0]["text"];
+                }
+            }
 
             // Return the translation
             return translation;
-
         }
     }
 }
-

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("qna-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7bea19713794937588ab5a2f39f6e1f389db433")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+149818154445ac90d10f7fae8c5d1d7c4f517a91")]
 [assembly: System.Reflection.AssemblyProductAttribute("qna-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("qna-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
